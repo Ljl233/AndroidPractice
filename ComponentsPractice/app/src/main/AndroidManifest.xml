@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".Activity3"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name=".Activity2"
+            android:configChanges="orientation" />
+        <activity android:name=".Activity1" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

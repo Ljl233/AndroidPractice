@@ -1,33 +1,19 @@
 package com.example.practice
 
-import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import com.example.practice.R
 
-class MainActivity : AppCompatActivity() {
+class Activity2 : AppCompatActivity() {
 
-    private val tag = "MainActivity"
+    private val tag = "Activity2"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_2)
         Log.e(tag, "onCreate")
-    }
 
-    fun onClickButton1(view: View) {
-        startActivity(Intent(this, Activity1::class.java))
-    }
-
-    fun onClickButton2(view: View) {
-        startActivity(Intent(this, Activity2::class.java))
-    }
-
-    fun onClickButton3(view: View) {
-        startActivity(Intent(this, Activity3::class.java))
     }
 
     override fun onStart() {
@@ -60,11 +46,6 @@ class MainActivity : AppCompatActivity() {
         Log.e(tag, "onStop")
     }
 
-    override fun onRestart() {
-        super.onRestart()
-        Log.e(tag, "onRestart")
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         Log.e(tag, "onDestroy")
@@ -74,5 +55,4 @@ class MainActivity : AppCompatActivity() {
         super.onConfigurationChanged(newConfig)
         Log.e(tag, "onConfigurationChanged")
     }
-
 }
